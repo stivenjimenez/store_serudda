@@ -1,3 +1,5 @@
+'use client'
+
 import type { IButton } from '@/models/Button'
 
 export default function Button({ text }: IButton) {
