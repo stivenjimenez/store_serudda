@@ -1,17 +1,12 @@
-'use client'
-
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 import Tile from '../components/Tile'
 
-export default function Home() {
-	const [gifts, setGifts] = useState<any[]>([])
+const fetchGifts = () => {
+	return fetch('http://localhost:3000/api/').then(res => res.json())
+}
 
-	useEffect(() => {
-		fetch('http://localhost:3000/api/')
-			.then(res => res.json())
-			.then(res => setGifts(res))
-	}, [])
+export default async function Home() {
+	const gifts = await fetchGifts()
 
 	return (
 		<main>
@@ -42,7 +37,7 @@ export default function Home() {
 
 				<div className='grid lg:grid-cols-3 md:grid-cols-2 gap-[40px]'>
 					{gifts &&
-						gifts.map(gift => (
+						gifts.map((gift: { name: string; description: string; price: number }) => (
 							<Tile
 								key={gift.name}
 								title={gift.name}
