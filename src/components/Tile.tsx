@@ -3,12 +3,12 @@ import Button from './Button'
 
 export default function Tile({ title, description, price }: ITile): JSX.Element {
 	return (
-		<div className='w-[25rem] h-[19rem] rounded-xl bg-black/primary py-[35px] px-[30px] flex flex-col'>
+		<div className='w-[20rem] h-[20rem] rounded-xl bg-black/primary py-[35px] px-[30px] flex flex-col justify-between hover:shadow-2xl'>
 			<h3 className='text-3xl font-bold truncate text-ellipsis'>{title}</h3>
-			<p className='text-2sm  h-[5rem] my-[14px] line-clamp-3 break-all antialiased'>
+			<p className='text-2sm  h-max mb-auto my-[14px] text-justify line-clamp-3 break-words antialiased'>
 				{description}
 			</p>
-			<span className='text-2xs font-bold text-purple mb-[30px] '>{price} pts</span>
+			<span className='text-2xs font-bold text-purple mb-[10px] '>{price} pts</span>
 			<Button text={'Canjear'} />
 		</div>
 	)
