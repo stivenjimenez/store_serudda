@@ -12,7 +12,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
 			<head />
-			<body className='text-[#FFFCF7] min-h-screen bg-[#141717] flex flex-col gap-10 items-center content-center relative overflow-hidden'>
+			<body className='text-white min-h-screen bg-bg/dark flex flex-col gap-10 items-center content-center relative overflow-hidden'>
 				{children}
 			</body>
 		</html>
