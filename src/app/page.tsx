@@ -9,20 +9,18 @@ export default async function Home() {
 	const gifts = await fetchGifts()
 
 	return (
-		<main>
+		<main className='relative py-16 flex flex-col gap-10 items-center content-center min-h-full'>
 			<div>
-				<div className='absolute w-[1158px] h-[1158px;] -translate-x-1/2 -translate-y-[747px] bg-gradient-radial from-[#815CD0]/40  via-[#815CD0]/10 to-transparent left-1/2  rounded-full blur-3xl opacity-70 '></div>
-
-				<div className='flex flex-col items-center py-5'>
+				<div className='flex flex-col items-center'>
 					<h1 className='text-7xl font-bold'>La Tienda</h1>
-					<h2 className='text-4xl font-semibold'>Canjea los puntos en premios.</h2>
+					<h2 className='text-4xl font-semibold'>Canjea los puntos en premios</h2>
 
-					<div className='flex relative mt-4'>
+					<div className='flex relative my-5'>
 						<SearchBar />
 					</div>
 				</div>
 
-				<div className='grid lg:grid-cols-3 md:grid-cols-2 gap-[40px]'>
+				<div className='my-12 grid lg:grid-cols-3 md:grid-cols-2 gap-[40px]'>
 					{gifts &&
 						gifts.map((gift: { name: string; description: string; price: number }) => (
 							<Tile
