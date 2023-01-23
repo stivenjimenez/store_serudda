@@ -12,12 +12,12 @@ module.exports = {
 			}
 		},
 		colors: {
-			'bg/dark': '#141717',
+			'bg/dark': '#18181b',
 			purple: '#815CD0',
 			'purple/secondary': '#6034c0',
-			'black/primary': '#1B1F1F',
+			'black/primary': '#27272a',
 			'black/secondary': '#323338',
-			white: '#FFFCF7'
+			white: '#fafafa'
 		}
 	},
 	plugins: [require('@tailwindcss/line-clamp')]
