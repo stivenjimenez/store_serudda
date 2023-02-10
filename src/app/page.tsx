@@ -12,11 +12,13 @@ export default async function Home() {
 	return (
 		<main className='relative py-16 flex flex-col gap-10 items-center content-center min-h-full'>
 			<div>
-				<div className='flex flex-col items-center'>
-					<h1 className='text-7xl font-bold'>La Tienda</h1>
-					<p className='text-4xl font-semibold'>Canjea los puntos en premios</p>
+				<div className='flex flex-col items-center flex-wrap justify-center'>
+					<h1 className='text-5xl font-bold md:text-7xl'>La Tienda</h1>
+					<p className='text-3xl text-center font-semibold md:text-4xl'>
+						Canjea los puntos en premios
+					</p>
 
-					<div className='flex relative my-5  gap-x-10 '>
+					<div className='flex relative my-5  gap-x-10 flex-wrap justify-center px-4'>
 						<div className='flex relative my-5 items-center '>
 							<SearchBar />
 						</div>
@@ -26,7 +28,7 @@ export default async function Home() {
 					</div>
 				</div>
 
-				<div className='my-12 grid lg:grid-cols-3 md:grid-cols-2 gap-[40px]'>
+				<div className='my-12 grid lg:grid-cols-3 md:grid-cols-2 gap-[40px] justify-center px-4'>
 					{gifts &&
 						gifts.map((gift: { name: string; description: string; price: number }) => (
 							<Tile
