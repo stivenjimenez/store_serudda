@@ -1,5 +1,6 @@
 import SearchBar from '@/components/SearchBar'
 import Tile from '@/components/Tile'
+import User from '@/components/User'
 
 const fetchGifts = () => {
 	return fetch('http://localhost:3000/api/').then(res => res.json())
@@ -13,10 +14,15 @@ export default async function Home() {
 			<div>
 				<div className='flex flex-col items-center'>
 					<h1 className='text-7xl font-bold'>La Tienda</h1>
-					<h2 className='text-4xl font-semibold'>Canjea los puntos en premios</h2>
+					<p className='text-4xl font-semibold'>Canjea los puntos en premios</p>
 
-					<div className='flex relative my-5'>
-						<SearchBar />
+					<div className='flex relative my-5  gap-x-10 '>
+						<div className='flex relative my-5 items-center '>
+							<SearchBar />
+						</div>
+						<div className='flex relative items-center gap-x-4'>
+							<User />
+						</div>
 					</div>
 				</div>
 
